@@ -5,7 +5,7 @@ end
 
 
 -- ex-commands
-vim.api.nvim_add_user_command(
+vim.api.nvim_create_user_command(
     'WhichTheme',
     function()
 
