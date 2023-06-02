@@ -4,7 +4,7 @@ if vim.g.loaded_which_theme then
 end
 
 
--- ex-commands
+-- ex-command
 vim.api.nvim_create_user_command(
     'WhichTheme',
     function()
