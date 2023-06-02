@@ -1,44 +1,37 @@
-
--- which-theme options
-local options = require('which-theme.options.default')
-
-
 local M = {}
+
+
+-- which-theme default options
+local options = require('which-theme.options.default')
 
 
 -- initializes which-theme options
 M.loadWhichThemeOptions = function(opts)
+    if opts == nil then
+        return
+    end
 
-    -- checks if options are ok
-    M.checkHealth(opts)
-
-    -- updates package options
-    options = opts
+    -- checks if options are ok and updates them
+    options = M.checkHealth(opts)
 end
 
 
 
 -- checks if options are correctly written
-M.checkHealth = function(options)
-    -- no need to check options if they're nil
-    if options == nil then
-        return
-    end
-
-
-
+M.checkHealth = function(opts)
     -- TODO: check options
     -- check that options are a table, otherwise error!
 
 
-    return options
+    return opts
 end
 
 
 
 -- retrieves a property from which-theme options
-M.get = function(property)
+M.getOption = function(property)
 
+    -- TODO: create a 'normalize path' func with this code
     if property == 'themes_directory' then
         local themes_directory = options['themes_directory']
         local nvim_config_dir  = vim.fn.stdpath('config') .. '/'

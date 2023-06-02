@@ -29,13 +29,13 @@ M.toggleWindow = window_pkg.toggleWindow
 
 
 -- theme functions -----------------------------------------------------
+M.loadTheme                    = themes_pkg.loadTheme
+
 M.enableTransparentBackground  = themes_pkg.enableTransparentBackground
 
 M.disableTransparentBackground = themes_pkg.disableTransparentBackground
 
 M.toggleTransparentBackground  = themes_pkg.toggleTransparentBackground
-
-M.loadTheme                    = themes_pkg.loadTheme
 ------------------------------------------------------------------------
 
 
